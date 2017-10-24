@@ -36,7 +36,7 @@ class plugina2a extends Plugin {
                         'enablePages'=>false,
                         'enablePosts'=>true,
                         'enableMinifyURL'=>true,
-						'specialCSS'=>''
+			'specialCSS'=>''
                 );
         }
 
