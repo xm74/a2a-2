@@ -8,7 +8,7 @@ class plugina2a extends Plugin {
         {
                 $ret  = '<!-- a2a BEGIN -->
                         <script type="text/javascript" src="//static.addtoany.com/menu/page.js"></script>
-						<style type="text/css">'.$this->getDbField('specialCSS').'</style>
+			<style type="text/css">'.$this->getDbField('specialCSS').'</style>
                         <div class="a2a-social" style="margin:20px 0px;">
                                 <div class="a2a_kit a2a_kit_size_32 a2a_default_style">
                                         <a class="a2a_button_facebook"></a>
