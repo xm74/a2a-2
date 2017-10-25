@@ -1,7 +1,7 @@
 {
         "plugin-data":
         {
-                "name": "a2a Social Sharing",
+                "name": "a2a share buttons",
                 "description": "Agrega a tus posts y paginas botones para compartir en las diferentes redes sociales."
         },
         "enable-addtoany-on-pages": "Habilitar en paginas",
