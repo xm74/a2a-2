@@ -1,7 +1,7 @@
 {
         "plugin-data":
         {
-                "name": "a2a Social Sharing",
+                "name": "a2a share buttons",
                 "description": "AddToAny набор кнопок для добавления в социальные сети."
         },
         "enable-addtoany-on-pages": "AddToAny для страниц",
