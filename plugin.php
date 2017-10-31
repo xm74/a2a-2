@@ -33,6 +33,7 @@ class plugina2a extends Plugin {
         public function init()
         {
                 $this->dbFields = array(
+			'enableHome'=>false,
                         'enablePages'=>false,
                         'enablePosts'=>true,
                         'enableMinifyURL'=>true,
@@ -45,6 +46,15 @@ class plugina2a extends Plugin {
                 global $Language;
 
                 $html  = '<div>';
+                $html .= '<label>'.$Language->get('enable-addtoany-on-home').'</label>';
+                $html .= '<select name="enableHome">';
+                $html .= '<option value="true" '.($this->getValue('enableHome')===true?'selected':'').'>'.$Language->get('enabled').'</option>';
+                $html .= '<option value="false" '.($this->getValue('enableHome')===false?'selected':'').'>'.$Language->get('disabled').'</option>';
+                $html .= '</select>';
+                $html .= '</div>';
+
+
+                $html .= '<div>';
                 $html .= '<label>'.$Language->get('enable-addtoany-on-pages').'</label>';
                 $html .= '<select name="enablePages">';
                 $html .= '<option value="true" '.($this->getValue('enablePages')===true?'selected':'').'>'.$Language->get('enabled').'</option>';
@@ -86,8 +96,10 @@ class plugina2a extends Plugin {
                             ($this->getDbField('enablePages') && $Page->status()=='static') ) {
                                 return $this->a2acode();
                         }
+		} elseif( $Url->whereAmI()=='home' && $this->getDbField('enableHome')) {
+                        return $this->a2acode();
                 }
-                return false;
+
         }
 
 }

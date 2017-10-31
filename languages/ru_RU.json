@@ -4,6 +4,7 @@
                 "name": "a2a share buttons",
                 "description": "AddToAny набор кнопок для добавления в социальные сети."
         },
+		"enable-addtoany-on-home": "AddToAny на главной",
         "enable-addtoany-on-pages": "AddToAny для страниц",
         "enable-addtoany-on-posts": "AddToAny для записей",
         "enable-google-url-shortener": "Cокращение ссылок",
