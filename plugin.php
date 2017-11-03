@@ -7,25 +7,25 @@ class plugina2a extends Plugin {
         private function a2acode()
         {
                 $ret  = '<!-- a2a BEGIN -->
-                        <script type="text/javascript" src="//static.addtoany.com/menu/page.js"></script>
-			<style type="text/css">.a2a_specialcss '.$this->getDbField('specialCSS').'</style>
-			<div class="a2a-social" style="margin:20px 0px;">
-                                <div class="a2a_kit a2a_kit_size_32 a2a_default_style a2a_specialcss">
-                                        <a class="a2a_button_facebook"></a>
-                                        <a class="a2a_button_twitter"></a>
-                                        <a class="a2a_button_google_plus"></a>
-                                        <a class="a2a_button_linkedin"></a>
-                                        <a class="a2a_dd" href="https://www.addtoany.com/share"></a>
-                                </div>
-                        </div>
-                        <script type="text/javascript">
-                        var a2a_config = a2a_config || {};
-                        a2a_config.icon_color = "#3c3b3b";';
-                if ( $this->getDbField('enableMinifyURL') ) {
-                        $ret .='a2a_config.track_links = "googl";';
-                };
-                $ret .= '</script>'.PHP_EOL;
-                $ret .= '<!-- a2a END -->'.PHP_EOL;
+	<script type="text/javascript" src="//static.addtoany.com/menu/page.js"></script>
+	<div class="a2a-social" style="margin:20px 0px;">
+		<style type="text/css">.a2a_specialcss '.$this->getDbField('specialCSS').'</style>
+		<div class="a2a_kit a2a_kit_size_32 a2a_default_style a2a_specialcss">
+			<a class="a2a_button_facebook"></a>
+			<a class="a2a_button_twitter"></a>
+			<a class="a2a_button_google_plus"></a>
+			<a class="a2a_button_linkedin"></a>
+			<a class="a2a_dd" href="https://www.addtoany.com/share"></a>
+		</div>
+	</div>
+	<script type="text/javascript">
+		var a2a_config = a2a_config || {};
+		a2a_config.icon_color = "#3c3b3b";';
+		if ( $this->getDbField('enableMinifyURL') ) {
+			$ret .='a2a_config.track_links = "googl";';
+		};
+		$ret .= '</script>'.PHP_EOL;
+		$ret .= '<!-- a2a END -->'.PHP_EOL;
                 
                 return $ret;
         }
