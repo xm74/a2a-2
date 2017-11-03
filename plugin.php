@@ -22,7 +22,7 @@ class plugina2a extends Plugin {
 			var a2a_config = a2a_config || {};
 			a2a_config.icon_color = "#3c3b3b";';
 		if ( $this->getDbField('enableMinifyURL') ) {
-			$ret .= PHP_EOL.'a2a_config.track_links = "googl";';
+			$ret .= PHP_EOL.'			a2a_config.track_links = "googl";';
 		};
 		$ret .= PHP_EOL.'		</script>'.PHP_EOL;
 		$ret .= '	<!-- a2a END -->'.PHP_EOL;
