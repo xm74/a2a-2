@@ -45,32 +45,32 @@ class plugina2a extends Plugin {
                 global $Language;
 
                 $html  = '<div>';
-                $html .= '<label>'.$Language->get('enable-addtoany-on-pages').'</label>';
-                $html .= '<select name="enablePages">';
+                $html .= '<label for="a2aenablepages">'.$Language->get('enable-addtoany-on-pages').'</label>';
+                $html .= '<select id="a2aenablepages" name="enablePages">';
                 $html .= '<option value="true" '.($this->getValue('enablePages')===true?'selected':'').'>'.$Language->get('enabled').'</option>';
                 $html .= '<option value="false" '.($this->getValue('enablePages')===false?'selected':'').'>'.$Language->get('disabled').'</option>';
                 $html .= '</select>';
                 $html .= '</div>';
 
                 $html .= '<div>';
-                $html .= '<label>'.$Language->get('enable-addtoany-on-posts').'</label>';
-                $html .= '<select name="enablePosts">';
+                $html .= '<label for="a2aenableposts">'.$Language->get('enable-addtoany-on-posts').'</label>';
+                $html .= '<select id="a2aenableposts" name="enablePosts">';
                 $html .= '<option value="true" '.($this->getValue('enablePosts')===true?'selected':'').'>'.$Language->get('enabled').'</option>';
                 $html .= '<option value="false" '.($this->getValue('enablePosts')===false?'selected':'').'>'.$Language->get('disabled').'</option>';
                 $html .= '</select>';
                 $html .= '</div>';
 
                 $html .= '<div>';
-                $html .= '<label>'.$Language->get('enable-google-url-shortener').'</label>';
-                $html .= '<select name="MinifyURL">';
+                $html .= '<label for="a2aminifyurl">'.$Language->get('enable-google-url-shortener').'</label>';
+                $html .= '<select id="a2aminifyurl" name="MinifyURL">';
                 $html .= '<option value="true" '.($this->getValue('enableMinifyURL')===true?'selected':'').'>'.$Language->get('enabled').'</option>';
                 $html .= '<option value="false" '.($this->getValue('enableMinifyURL')===false?'selected':'').'>'.$Language->get('disabled').'</option>';
                 $html .= '</select>';
                 $html .= '</div>';
 
                 $html .= '<div>';
-                $html .= '<label>'.$Language->get('a2a-special-css').'</label>';
-                $html .= '<textarea type="text" name="specialCSS">'.$this->getDbField('specialCSS').'</textarea>';
+                $html .= '<label for="a2aspecialcss">'.$Language->get('a2a-special-css').'</label>';
+                $html .= '<textarea id="a2aspecialcss" type="text" name="specialCSS">'.$this->getDbField('specialCSS').'</textarea>';
                 $html .= '<span class="tip">'.$Language->get('complete-this-field-with-css-code').'</span>';
                 $html .= '</div>';
 
